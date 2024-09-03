@@ -11,13 +11,13 @@ const App = () => {
 
   return (
     <div className="h-screen flex bg-cyan-300 justify-center items-center">
-      <div className="w-full max-w-4xl flex justify-center">
+      <div className="w-full max-w-4xl flex justify-center  bg-white">
         {/* Form Section */}
         <div className="w-1/2 flex justify-center items-center ">
           <Form onCalculate={handleCalculate} />
         </div>
         {/* Results Section */}
-        <div className=" flex justify-center items-center bg-slate-800 p-6 rounded-lg shadow-md w-full max-w-md">
+        <div className=" flex justify-center items-center bg-slate-800 p-6 rounded-bl-[110px] shadow-md w-full max-w-md">
           <Results data={formData} />
         </div>
       </div>

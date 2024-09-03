@@ -106,7 +106,7 @@ const Form = ({ onCalculate }) => {
       </div>
       <div className="flex justify-between">
         <button
-          className="bg-lime-300 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded flex items-center"
+          className="bg-lime-500 hover:bg-lime-500 text-white font-bold py-2 px-4 rounded flex items-center"
           type="submit"
         >
           <FontAwesomeIcon icon={faCalculator} className="mr-2" />

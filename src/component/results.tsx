@@ -3,9 +3,10 @@ import React from 'react';
 const Results = ({ data }) => {
   if (!data) {
     return (
-      <div>
-        <h2 className="text-2xl font-bold mb-2 text-center">Your Results</h2>
-        <p className="text-gray-500 text-lg text-center">Please fill out the form to see your results</p>
+      <div className="rounded-lg p-6 shadow-md w-full max-w-md text-white text-center">
+      <h2 className="text-2xl font-bold mb-2 text-center">Your Results</h2>
+      <p>Your results will be shown here</p>
+     <p>Please fill out the form to see your results</p>
       </div>
     );
   }
@@ -28,10 +29,19 @@ const Results = ({ data }) => {
   const totalRepayment = monthlyPayment * numberOfPayments;
 
   return (
-    <div className="border-r-6 p-6 rounded-lg shadow-md w-full max-w-md">
+    <div className="rounded-lg p-6 shadow-md w-full max-w-md text-white text-center">
       <h2 className="text-2xl font-bold mb-2 text-center">Your Results</h2>
-      <p className="text-black text-lg">Your monthly repayments: <strong>£{monthlyPayment.toFixed(2)}</strong></p>
-      <p className="text-black text-lg">Total you'll repay over the term: <strong>£{totalRepayment.toFixed(2)}</strong></p>
+      <p>Your results will be shown here</p>
+      <p>And if you want to make any changes you can edit it and click on Calculate</p>
+      <div className="border-t-4 border-lime-500 rounded-lg p-6 bg-slate-900 mt-4">
+        <div className="text-4xl mb-4 text-lime-500 ">
+         <p className="text-lg mb-4 text-white" >Your monthly repayments </p> <strong>£{monthlyPayment.toFixed(2)}</strong>
+        </div>
+        <hr className="border-t-2 border-white-400 my-4" />
+        <p className="text-lg">
+          Total you'll repay over the terms <br /> <strong>£{totalRepayment.toFixed(2)}</strong>
+        </p>
+      </div>
     </div>
   );
 };
